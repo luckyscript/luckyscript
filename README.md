@@ -1,5 +1,9 @@
 ### Hi there 👋
 
+You can find me in [RainOnPiano](https://rainonpiano.com) and [Sailor.ink](https://sailor.ink)
+
+My [Homelab](https://index.homelab.wan.jsjhlk.com)
+
 <!--
 **luckyscript/luckyscript** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
