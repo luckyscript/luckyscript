@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <style>
+    @keyframes blink {
+      0%, 92%, 100% { transform: scaleY(1); }
+      96% { transform: scaleY(0.1); }
+    }
+    @keyframes blinkRight {
+      0%, 94%, 100% { transform: scaleY(1); }
+      97% { transform: scaleY(0.1); }
+    }
+    @keyframes typeLeft {
+      0%, 50%, 100% { transform: translateY(0); }
+      25% { transform: translateY(-3px); }
+      75% { transform: translateY(2px); }
+    }
+    @keyframes typeRight {
+      0%, 50%, 100% { transform: translateY(0); }
+      25% { transform: translateY(2px); }
+      75% { transform: translateY(-3px); }
+    }
+    @keyframes keyFlash {
+      0%, 100% { fill: #484f58; }
+      50% { fill: #58a6ff; }
+    }
+    @keyframes keyFlash2 {
+      0%, 100% { fill: #58a6ff; }
+      50% { fill: #2ea043; }
+    }
+    @keyframes glowPulse {
+      0%, 100% { opacity: 0.4; r: 3; }
+      50% { opacity: 0.9; r: 5; }
+    }
+    @keyframes binaryFlicker {
+      0%, 100% { opacity: 0.15; }
+      25% { opacity: 0.7; }
+      50% { opacity: 0.3; }
+      75% { opacity: 0.6; }
+    }
+    @keyframes binaryFlicker2 {
+      0%, 100% { opacity: 0.5; }
+      33% { opacity: 0.2; }
+      66% { opacity: 0.7; }
+    }
+    @keyframes smileBreathe {
+      0%, 100% { width: 50; }
+      50% { width: 55; }
+    }
+    .eye-left {
+      transform-origin: 72.5px 90px;
+      animation: blink 4s infinite;
+    }
+    .eye-right {
+      transform-origin: 127.5px 90px;
+      animation: blinkRight 4s infinite;
+    }
+    .hand-left {
+      animation: typeLeft 0.8s infinite;
+    }
+    .hand-right {
+      animation: typeRight 0.8s infinite;
+    }
+    .key-a { animation: keyFlash 1.2s infinite; }
+    .key-b { animation: keyFlash 1.2s infinite 0.3s; }
+    .key-c { animation: keyFlash2 1.2s infinite 0.6s; }
+    .key-d { animation: keyFlash 1.2s infinite 0.9s; }
+    .glow-l {
+      transform-origin: 55px 75px;
+      animation: glowPulse 2.5s infinite;
+    }
+    .glow-r {
+      transform-origin: 145px 75px;
+      animation: glowPulse 2.5s infinite 1.25s;
+    }
+    .binary-a { animation: binaryFlicker 3s infinite; }
+    .binary-b { animation: binaryFlicker2 3s infinite 0.5s; }
+    .binary-c { animation: binaryFlicker 3s infinite 1s; }
+    .binary-d { animation: binaryFlicker2 3s infinite 1.5s; }
+    .smile { animation: smileBreathe 2s infinite ease-in-out; }
+  </style>
+
+  <!-- Background -->
+  <rect width="200" height="200" fill="#0d1117" rx="100"/>
+
+  <!-- Pixel grid pattern -->
+  <defs>
+    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="none" stroke="#161b22" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="200" height="200" fill="url(#grid)" rx="100" opacity="0.3"/>
+
+  <!-- Bytecode text elements scattered - ANIMATED -->
+  <text x="15" y="30" font-family="monospace" font-size="8" fill="#1a5c3a" class="binary-a">01001011</text>
+  <text x="15" y="45" font-family="monospace" font-size="8" fill="#1a5c3a" class="binary-b">10110101</text>
+  <text x="120" y="30" font-family="monospace" font-size="8" fill="#1a5c3a" class="binary-c">01111001</text>
+  <text x="125" y="45" font-family="monospace" font-size="8" fill="#1a5c3a" class="binary-d">11001101</text>
+  <text x="10" y="170" font-family="monospace" font-size="8" fill="#1a5c3a" class="binary-d">00110110</text>
+  <text x="115" y="175" font-family="monospace" font-size="8" fill="#1a5c3a" class="binary-a">10100100</text>
+  <text x="10" y="185" font-family="monospace" font-size="8" fill="#1a5c3a" class="binary-b">11010011</text>
+  <text x="110" y="188" font-family="monospace" font-size="8" fill="#1a5c3a" class="binary-c">01101110</text>
+
+  <!-- Pixel art head - 8-bit style -->
+  <!-- Hair -->
+  <rect x="60" y="50" width="80" height="10" fill="#1f6feb"/>
+  <rect x="50" y="60" width="20" height="10" fill="#1f6feb"/>
+  <rect x="130" y="60" width="20" height="10" fill="#1f6feb"/>
+
+  <!-- Face -->
+  <rect x="50" y="70" width="100" height="10" fill="#e6b980"/>
+  <rect x="45" y="80" width="110" height="10" fill="#e6b980"/>
+  <rect x="45" y="90" width="110" height="10" fill="#e6b980"/>
+  <rect x="45" y="100" width="110" height="10" fill="#e6b980"/>
+  <rect x="50" y="110" width="100" height="10" fill="#e6b980"/>
+
+  <!-- Eyes - BLINKING -->
+  <rect x="65" y="85" width="15" height="10" fill="#0d1117" class="eye-left"/>
+  <rect x="120" y="85" width="15" height="10" fill="#0d1117" class="eye-right"/>
+
+  <!-- Glasses -->
+  <rect x="60" y="83" width="25" height="14" fill="none" stroke="#58a6ff" stroke-width="2"/>
+  <rect x="115" y="83" width="25" height="14" fill="none" stroke="#58a6ff" stroke-width="2"/>
+  <rect x="85" y="88" width="30" height="4" fill="none" stroke="#58a6ff" stroke-width="2"/>
+
+  <!-- Smile - BREATHING -->
+  <rect x="75" y="105" width="50" height="5" fill="#c17c5e" class="smile"/>
+
+  <!-- Hoodie/Body -->
+  <rect x="40" y="120" width="120" height="10" fill="#238636"/>
+  <rect x="35" y="130" width="130" height="10" fill="#238636"/>
+  <rect x="30" y="140" width="140" height="10" fill="#238636"/>
+  <rect x="30" y="150" width="140" height="20" fill="#2ea043"/>
+
+  <!-- Hoodie drawstring -->
+  <rect x="90" y="120" width="5" height="20" fill="#1a7f37"/>
+  <rect x="105" y="120" width="5" height="20" fill="#1a7f37"/>
+
+  <!-- "&lt;/&gt;" on hoodie -->
+  <text x="82" y="147" font-family="monospace" font-size="11" fill="#ffffff" font-weight="bold">&lt;/&gt;</text>
+
+  <!-- Keyboard hands - TYPING ANIMATION -->
+  <rect x="20" y="165" width="30" height="10" fill="#e6b980" class="hand-left"/>
+  <rect x="150" y="165" width="30" height="10" fill="#e6b980" class="hand-right"/>
+
+  <!-- Pixel keyboard - FLASHING KEYS -->
+  <rect x="25" y="178" width="150" height="8" fill="#30363d" rx="2"/>
+  <rect x="30" y="180" width="8" height="4" fill="#484f58" class="key-a"/>
+  <rect x="42" y="180" width="8" height="4" fill="#484f58" class="key-b"/>
+  <rect x="54" y="180" width="8" height="4" fill="#484f58" class="key-c"/>
+  <rect x="66" y="180" width="8" height="4" fill="#484f58" class="key-d"/>
+  <rect x="78" y="180" width="8" height="4" fill="#58a6ff" class="key-a"/>
+  <rect x="90" y="180" width="20" height="4" fill="#484f58" class="key-c"/>
+  <rect x="114" y="180" width="8" height="4" fill="#58a6ff" class="key-b"/>
+  <rect x="126" y="180" width="8" height="4" fill="#484f58" class="key-d"/>
+  <rect x="138" y="180" width="8" height="4" fill="#484f58" class="key-a"/>
+  <rect x="150" y="180" width="8" height="4" fill="#484f58" class="key-c"/>
+
+  <!-- Small green glow accents - BREATHING/PULSING -->
+  <circle cx="55" cy="75" r="3" fill="#2ea043" class="glow-l"/>
+  <circle cx="145" cy="75" r="3" fill="#2ea043" class="glow-r"/>
+</svg>
